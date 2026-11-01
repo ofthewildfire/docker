@@ -5,6 +5,8 @@
 
 FROM debian:stable-slim
 
-# execute the 'echo "hello world"'
-# command when the container runs
-CMD ["echo", "hello world"]
+# COPY source destination
+COPY docker /bin/docker
+ENV PORT=8991
+CMD ["/bin/docker"]
+
